@@ -11,6 +11,7 @@ def create_app():
     if os.getenv('ENV', "development") == "production":
       raise Exception("Currently no production config is setup.")
     else:
+        #first commit
       print("Staring Local Development")
       app.config.from_object(LocalDevelopmentConfig)
     db.init_app(app)
