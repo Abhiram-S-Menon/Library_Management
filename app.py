@@ -17,6 +17,7 @@ def author():
     if request.method=="POST":
         author=request.form["auth_name"]
         conn=None
+    #commit
         try:
             conn=psycopg2.connect(database="lis",user="postgres",password="007007",host="/var/run/postgresql",port="5432")
             
